@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <record id="screwdriver_flat_4" model="screwdriver.type">
+            <field name="name">Flat 4</field>
+            <field name="description">Flat head screwdriver, size 4</field>
+        </record>
+        <record id="screwdriver_ph_2" model="screwdriver.type">
+            <field name="name">Phillips 2</field>
+            <field name="description">Phillips head screwdriver, size 2</field>
+        </record>
+        <record id="screwdriver_torx_5" model="screwdriver.type">
+            <field name="name">Torx 5</field>
+            <field name="description">Torx head screwdriver, size 5</field>
+        </record>
+    </data>
+</odoo>

@@ -9,7 +9,10 @@
         "base"
     ],
     "data": [
-        "views/screwdriver_menu.xml"
+        "security/ir.model.access.csv",
+        "views/screwdriver_menu.xml",
+        "views/screwdriver_type_views.xml",
+        "data/screwdriver_type_data.xml",
     ],
     "installable": True,
     "application": True,
