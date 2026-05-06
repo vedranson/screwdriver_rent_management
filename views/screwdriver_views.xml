@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <record id="screwdriver_form_view" model="ir.ui.view">
+        <field name="name">screwdriver.form</field>
+        <field name="model">screwdriver</field>
+        <field name="arch" type="xml">
+            <form string="Screwdriver">
+                <sheet>
+                    <group>
+                        <field name="name" />
+                        <field name="type_id" />
+                    </group>
+                    <group>
+                        <field name="state" />
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="screwdriver_tree_view" model="ir.ui.view">
+        <field name="name">screwdriver.tree</field>
+        <field name="model">screwdriver</field>
+        <field name="arch" type="xml">
+            <tree string="Screwdrivers">
+                <field name="name" />
+                <field name="type_id" />
+                <field name="state" />
+            </tree>
+        </field>
+    </record>
+
+    <record id="screwdriver_action" model="ir.actions.act_window">
+        <field name="name">Screwdrivers</field>
+        <field name="res_model">screwdriver</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <menuitem id="screwdriver_menu" name="Screwdrivers"
+        parent="screwdriver_rent_management_menu" action="screwdriver_action" 
+        sequence="10" />
+</odoo>

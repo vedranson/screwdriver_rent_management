@@ -42,5 +42,6 @@
     </record>
 
     <menuitem id="screwdriver_type_menu" name="Screwdriver Types"
-        parent="screwdriver_rent_management_menu" action="screwdriver_type_action" />
+        parent="screwdriver_rent_management_menu" action="screwdriver_type_action" 
+        sequence="20" />
 </odoo>
