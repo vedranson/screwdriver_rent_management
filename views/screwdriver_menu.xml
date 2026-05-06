@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <menuitem id="screwdriver_menu_root"
+        name="Screwdriver Rental Management"
+        action="base.action_res_users" /> # Wrong action - just to make the app icon appear in the menu
+</odoo>
