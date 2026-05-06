@@ -7,8 +7,14 @@
             <form string="Screwdriver Type">
                 <sheet>
                     <group>
-                        <field name="name" />
-                        <field name="description" />
+                        <group>
+                            <field name="name" />
+                            <field name="name_old_sys" />
+                        </group>
+                        <group>
+                            <field name="description" />
+                            <field name="active" />
+                        </group>
                     </group>
                 </sheet>
             </form>
@@ -21,7 +27,9 @@
         <field name="arch" type="xml">
             <tree string="Screwdriver Types">
                 <field name="name" />
+                <field name="name_old_sys" />
                 <field name="description" />
+                <field name="active" />
             </tree>
         </field>
     </record>
@@ -30,6 +38,7 @@
         <field name="name">Screwdriver Types</field>
         <field name="res_model">screwdriver.type</field>
         <field name="view_mode">tree,form</field>
+        <field name="context">{'active_test': False}</field>
     </record>
 
     <menuitem id="screwdriver_type_menu" name="Screwdriver Types"
