@@ -1,3 +1,4 @@
 id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
 access_screwdriver_type,screwdriver.type,model_screwdriver_type,base.group_user,1,1,1,1
 access_screwdriver,screwdriver,model_screwdriver,base.group_user,1,1,1,1
+access_screwdriver_rental,screwdriver.rental,model_screwdriver_rental,base.group_user,1,1,1,1

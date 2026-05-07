@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <record id="view_screwdriver_rental_form" model="ir.ui.view">
+        <field name="name">screwdriver.rental.form</field>
+        <field name="model">screwdriver.rental</field>
+        <field name="arch" type="xml">
+            <form string="Screwdriver Rental">
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="partner_id" />
+                            <field name="screwdriver_id" />
+                        </group>
+                        <group>
+                            <field name="rental_date" />
+                            <field name="return_date" />
+                        </group>
+                    </group>
+                </sheet>
+                <div class="oe_chatter">
+                    <field name="message_follower_ids" />
+                    <field name="activity_ids" />
+                    <field name="message_ids" />
+                </div>
+            </form>
+        </field>
+    </record>
+
+    <record id="view_screwdriver_rental_tree" model="ir.ui.view">
+        <field name="name">screwdriver.rental.tree</field>
+        <field name="model">screwdriver.rental</field>
+        <field name="arch" type="xml">
+            <tree string="Screwdriver Rentals">
+                <field name="partner_id" />
+                <field name="screwdriver_id" />
+                <field name="rental_date" />
+                <field name="return_date" />
+            </tree>
+        </field>
+    </record>
+
+    <record id="action_screwdriver_rental" model="ir.actions.act_window">
+        <field name="name">Screwdriver Rentals</field>
+        <field name="res_model">screwdriver.rental</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <menuitem
+        id="screwdriver_rental_menu"
+        parent="screwdriver_rental_management_menu"
+        name="Rentals"
+        action="action_screwdriver_rental"
+        sequence="20" />
+
+</odoo>

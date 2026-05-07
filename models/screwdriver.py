@@ -6,7 +6,7 @@ class Screwdriver(models.Model):
     _description = "Screwdriver"
 
     # id is automatically created
-    name = fields.Char(string="Inventory Number", required=True)
+    name = fields.Char(string="ID", required=True)
     type_id = fields.Many2one(
         comodel_name="screwdriver.type",
         string="Screwdriver Type",

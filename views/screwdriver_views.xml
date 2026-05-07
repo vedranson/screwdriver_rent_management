@@ -37,6 +37,6 @@
     </record>
 
     <menuitem id="screwdriver_menu" name="Screwdrivers"
-        parent="screwdriver_rent_management_menu" action="screwdriver_action" 
+        parent="screwdriver_rental_management_menu" action="screwdriver_action" 
         sequence="10" />
 </odoo>

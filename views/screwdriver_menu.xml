@@ -2,7 +2,7 @@
 <odoo>
 
     <menuitem
-        id="screwdriver_rent_management_menu"
-        name="Screwdriver Rent Management" />
+        id="screwdriver_rental_management_menu"
+        name="Screwdriver Rental Management" />
 
 </odoo>

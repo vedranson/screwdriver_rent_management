@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <record id="res_partner_form_view_inherit" model="ir.ui.view">
+        <field name="name">res.partner.form.inherit.screwdriver.rental</field>
+        <field name="model">res.partner</field>
+        <field name="inherit_id" ref="base.view_partner_form" />
+        <field name="arch" type="xml">
+            <xpath expr="//notebook/page[@name='sales_purchases']" position="after">
+                <page name="screwdriver_rental" string="Screwdriver Rentals">
+                    <group>
+                        <field name="screwdriver_rental_ids"
+                            widget="one2many_list"
+                            context="{'default_partner_id': active_id}"
+                            views="[(ref('view_screwdriver_rental_tree_partner'), 'tree'), (ref('view_screwdriver_rental_form'), 'form')]">
+                            <tree string="Screwdriver Rentals" editable="bottom">
+                                <field name="screwdriver_id" />
+                                <field name="rental_date" />
+                                <field name="return_date" />
+                            </tree>
+                        </field>
+                    </group>
+                </page>
+            </xpath>
+        </field>
+    </record>
+</odoo>
