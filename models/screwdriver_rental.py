@@ -25,6 +25,7 @@ class ScrewdriverRental(models.Model):
         index=True,
         required=True,
         tracking=True,
+        domain="[('state', '=', 'available')]",
     )
     rental_date = fields.Date(
         string="Rental Date", required=True, tracking=True
@@ -46,6 +47,7 @@ class ScrewdriverRental(models.Model):
     @api.model
     def create(self, vals):
         rec = super().create(vals)
+        rec.screwdriver_id.state = "rented"
         rec.partner_id.message_post(
             body=Markup("Screwdriver rental created: %s")
             % rec._get_html_link(),
@@ -57,6 +59,8 @@ class ScrewdriverRental(models.Model):
     def write(self, vals):
         res = super().write(vals)
         for rec in self:
+            if "return_date" in vals and vals["return_date"]:
+                rec.screwdriver_id.state = "available"
             rec.partner_id.message_post(
                 body=Markup("Screwdriver rental updated: %s")
                 % rec._get_html_link(),

@@ -8,11 +8,16 @@
     <record id="screwdriver_1002" model="screwdriver">
         <field name="name">1002</field>
         <field name="type_id" ref="screwdriver_ph_2" />
-        <field name="state">rented</field>
+        <field name="state">decommissioned</field>
     </record>
     <record id="screwdriver_1003" model="screwdriver">
         <field name="name">1003</field>
         <field name="type_id" ref="screwdriver_torx_5" />
+        <field name="state">available</field>
+    </record>
+    <record id="screwdriver_1004" model="screwdriver">
+        <field name="name">1004</field>
+        <field name="type_id" ref="screwdriver_flat_4" />
         <field name="state">available</field>
     </record>
 </odoo>

@@ -7,18 +7,24 @@
         <field name="arch" type="xml">
             <xpath expr="//notebook/page[@name='sales_purchases']" position="after">
                 <page name="screwdriver_rental" string="Screwdriver Rentals">
-                    <group>
-                        <field name="screwdriver_rental_ids"
-                            widget="one2many_list"
-                            context="{'default_partner_id': active_id}"
-                            views="[(ref('view_screwdriver_rental_tree_partner'), 'tree'), (ref('view_screwdriver_rental_form'), 'form')]">
-                            <tree string="Screwdriver Rentals" editable="bottom">
-                                <field name="screwdriver_id" />
-                                <field name="rental_date" />
-                                <field name="return_date" />
-                            </tree>
-                        </field>
-                    </group>
+                    <separator string="Current Rentals" />
+                    <field name="screwdriver_rental_active_ids"
+                        context="{'default_partner_id': active_id}">
+                        <tree editable="bottom" no_open="1">
+                            <field name="screwdriver_id" />
+                            <field name="rental_date" />
+                            <field name="return_date" />
+                        </tree>
+                    </field>
+                    <separator string="Rental History" />
+                    <field name="screwdriver_rental_history_ids"
+                        context="{'default_partner_id': active_id}">
+                        <tree no_open="1" create="0" delete="0">
+                            <field name="screwdriver_id" />
+                            <field name="rental_date" />
+                            <field name="return_date" />
+                        </tree>
+                    </field>
                 </page>
             </xpath>
         </field>
